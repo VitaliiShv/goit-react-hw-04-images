@@ -16,6 +16,7 @@ const Modal = ({ onClose, children }) => {
     window.addEventListener('keydown', closeModal);
 
     return () => window.addEventListener('keydown', closeModal);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return createPortal(

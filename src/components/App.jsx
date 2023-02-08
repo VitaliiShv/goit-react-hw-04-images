@@ -22,7 +22,7 @@ const App = () => {
         try {
           setLoading(true);
           const hits = await searchImages(searchQuery, page);
-          setImages(prevImages => [...images, ...hits]);
+          setImages(prevImages => [...prevImages, ...hits]);
         } catch (error) {
           setError(error.message);
         } finally {
